@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E05E13C-2B39-4D1E-889C-D7013DD1F1EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAnCKChinhThuc</RootNamespace>
+    <AssemblyName>DoAnCKChinhThuc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="DoiMatKhauDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhauDangNhap.Designer.cs">
+      <DependentUpon>DoiMatKhauDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBanHang.Designer.cs">
+      <DependentUpon>FormBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapMaBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapMaBan.Designer.cs">
+      <DependentUpon>FormNhapMaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLBan.Designer.cs">
+      <DependentUpon>FormQLBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLLLOAIHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLLLOAIHH.Designer.cs">
+      <DependentUpon>FormQLLLOAIHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLNV.Designer.cs">
+      <DependentUpon>FormQLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLHH.Designer.cs">
+      <DependentUpon>FormQLHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportHoaDon.Designer.cs">
+      <DependentUpon>FormReportHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportThongKe.Designer.cs">
+      <DependentUpon>FormReportThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienUser.Designer.cs">
+      <DependentUpon>GiaoDienUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDienAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienAdmin.Designer.cs">
+      <DependentUpon>GiaoDienAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PictureBoxState.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormQLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLKhachHang.designer.cs">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongKeHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKeHD.designer.cs">
+      <DependentUpon>FormThongKeHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhauDangNhap.resx">
+      <DependentUpon>DoiMatKhauDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBanHang.resx">
+      <DependentUpon>FormBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapMaBan.resx">
+      <DependentUpon>FormNhapMaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLBan.resx">
+      <DependentUpon>FormQLBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLLLOAIHH.resx">
+      <DependentUpon>FormQLLLOAIHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNV.resx">
+      <DependentUpon>FormQLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLHH.resx">
+      <DependentUpon>FormQLHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportHoaDon.resx">
+      <DependentUpon>FormReportHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportThongKe.resx">
+      <DependentUpon>FormReportThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienUser.resx">
+      <DependentUpon>GiaoDienUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienAdmin.resx">
+      <DependentUpon>GiaoDienAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormQLKhachHang.resx">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKeHD.resx">
+      <DependentUpon>FormThongKeHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ThongKe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\logoDangNhapCafe-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-log-in-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-exit-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-update-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-add-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-delete-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-save-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-cancel-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-search-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-view-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-change-password-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-log-out-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-coffee-trong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-coffee-dangdung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-coffee-dangchon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-forward-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-open-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-close-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-bill-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-print-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\icons8-report-35.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
